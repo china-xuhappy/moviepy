@@ -10,24 +10,24 @@ from moviepy.Effect import Effect
 
 @dataclass
 class Resize(Effect):
-    """Effect returning a video clip that is a resized version of the clip.
+    """返回一个调整大小后的视频剪辑的效果。
 
-    Parameters
+    参数
     ----------
-
-    new_size : tuple or float or function, optional
-        Can be either
-        - ``(width, height)`` in pixels or a float representing
-        - A scaling factor, like ``0.5``.
-        - A function of time returning one of these.
-
-    height : int, optional
-        Height of the new clip in pixels. The width is then computed so
-        that the width/height ratio is conserved.
-
-    width : int, optional
-        Width of the new clip in pixels. The height is then computed so
-        that the width/height ratio is conserved.
+    
+    new_size：元组、浮点数或函数，可选
+    可以是：
+    - 以像素为单位的“(width, height)”或表示缩放因子的浮点数
+    - 缩放因子，例如“0.5”。
+    - 返回以下之一的时间函数。
+    
+    height：整数，可选
+    新剪辑的高度（以像素为单位）。然后计算宽度，使
+    宽高比保持不变。
+    
+    width：整数，可选
+    新剪辑的宽度（以像素为单位）。然后计算高度，使
+    宽高比保持不变。
 
     Examples
     --------
